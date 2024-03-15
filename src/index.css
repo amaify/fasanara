@@ -1,0 +1,130 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: white;
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --border: 1px solid rgba(204, 204, 204, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 1rem 1rem 6rem 1rem;
+}
+
+main {
+  height: 100dvh;
+
+  & button {
+    border: 1px solid white;
+    background: transparent;
+    padding: 0.4rem 1.5rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.chart-heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.pie-chart .ag-chart-wrapper {
+  display: flex;
+  position: relative;
+  border: var(--border);
+}
+
+.chart-heading > h2 {
+  font-size: 1.2rem;
+  align-self: flex-start;
+  background-image: radial-gradient(circle, #00efef 20%, #0097f3 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chart-heading > h3 {
+  font-size: clamp(1.3rem, -0.86rem + 7.68vw, 2.5rem);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.chart-heading > p {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.pie-chart {
+  width: 100%;
+  height: 500px;
+  min-width: 300px;
+}
+
+.line-chart {
+  width: 100%;
+  height: 550px;
+  min-width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .pie-chart {
+    max-width: 600px;
+  }
+
+  .line-chart {
+    max-width: 900px;
+  }
+}
+
+.line-chart .ag-chart-wrapper {
+  border: var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 60%, blue);
+    opacity: 0.35;
+    z-index: -1;
+  }
+}
