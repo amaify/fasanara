@@ -1,7 +1,5 @@
 # Sefanara
 
-## Getting Started
-
 This is the take home assessment from Fasanara
 
 Line Chart
@@ -9,6 +7,8 @@ Line Chart
 
 Pie Chart
 ![Pie Chart preview](./preview2.png)
+
+## Getting Started
 
 ### Run
 
@@ -19,3 +19,8 @@ Tools Used:
 
 - React + Typescript, and Vanilla CSS for styling.
 - Core package: `AgReactCharts`
+
+#### Live links
+
+live url: https://tobe-fasanara.vercel.app/
+repository: https://github.com/amaify/fasanara
