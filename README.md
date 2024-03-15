@@ -22,5 +22,5 @@ Tools Used:
 
 #### Live links
 
-live url: https://tobe-fasanara.vercel.app/
-repository: https://github.com/amaify/fasanara
+- live url: https://tobe-fasanara.vercel.app/
+- repository: https://github.com/amaify/fasanara
